@@ -1,0 +1,16 @@
+{
+  "name": "minifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan Alvarado V <alvaradovallejo.juan@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "combine-source-map": "^0.8.0",
+    "convert-source-map": "^2.0.0",
+    "uglify-js": "^3.17.4"
+  }
+}
