@@ -63,18 +63,13 @@ function minifyFilesFromHTML(htmlFilePath, outputPrefix) {
 
   const chunkSize = 50; // Puedes ajustar el tamaño del bloque según tus necesidades
   const totalChunks = Math.ceil(fileList.length / chunkSize);
-  const progressBar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
-  progressBar.start(totalChunks, 0);
 
   const fileChunks = [];
 
   for (let i = 0; i < totalChunks; i++) {
     const chunk = fileList.slice(i * chunkSize, (i + 1) * chunkSize);
     fileChunks.push(chunk);
-    progressBar.update(i + 1);
   }
-
-  progressBar.stop();
 
   const outputFileName = `${outputPrefix}.min.js`;
   const outputMapFileName = `${outputPrefix}.min.js.map`;
